@@ -1,0 +1,7 @@
+#ifndef CONSTANTS
+#define CONSTANTS
+
+#define SAMPLE_RATE 44100
+#define FRAMES_PER_BUFFER 256
+
+#endif
