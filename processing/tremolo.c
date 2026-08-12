@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "tremolo.h"
-
-#define PI 3.14159265358979323846f
+#include "../constants.h"
 
 TremoloState *tremolo_create(float depth, float frequency, float sample_rate)
 {

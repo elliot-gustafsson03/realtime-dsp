@@ -3,5 +3,6 @@
 
 #define SAMPLE_RATE 44100
 #define FRAMES_PER_BUFFER 256
+#define PI 3.14159265358979323846f
 
 #endif
