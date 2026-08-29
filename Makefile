@@ -9,6 +9,7 @@ TARGET = dsp.app
 # All source files that need to be compiled
 SRCS = main.c \
        processing/processor.c \
+	   util/operations.c \
        processing/tremolo.c \
        processing/delay.c
 
