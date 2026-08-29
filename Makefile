@@ -9,7 +9,8 @@ TARGET = dsp
 # All source files that need to be compiled
 SRCS = main.c \
        processing/processor.c \
-       processing/tremolo.c
+       processing/tremolo.c \
+       processing/delay.c
 
 # Convert the .c filenames into .o (object) filenames
 OBJS = $(SRCS:.c=.o)

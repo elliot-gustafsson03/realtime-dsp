@@ -10,6 +10,7 @@
 #include "dsp_pipeline.h"
 #include "processing/processor.h"
 #include "processing/tremolo.h"
+#include "processing/delay.h"
 
 typedef struct
 {
@@ -72,10 +73,10 @@ int main(int argc, char *argv[])
         }
     }
 
-    TremoloState *tremolo1 = tremolo_create(0.4f, 6.0f, SAMPLE_RATE);
+    DelayState *delay1 = delay_create(0.4, 0.3, 5);
 
     EffectNode pedalboard[] = {
-        {.state = tremolo1, .process = tremolo_process}};
+        {.state = delay1, .process = delay_process}};
     int num_effects = sizeof(pedalboard) / sizeof(EffectNode);
 
     AppState state;
@@ -106,7 +107,7 @@ int main(int argc, char *argv[])
     Pa_CloseStream(stream);
     Pa_Terminate();
 
-    tremolo_destroy(tremolo1);
+    delay_destroy(delay1);
 
     if (state.is_recording || (record_filename != NULL && state.rec_index > 0))
     {
