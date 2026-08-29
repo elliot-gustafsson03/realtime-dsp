@@ -4,7 +4,7 @@ CFLAGS = -Wall -O3
 LDFLAGS = -lportaudio -lm
 
 # The name of the final executable
-TARGET = dsp
+TARGET = dsp.app
 
 # All source files that need to be compiled
 SRCS = main.c \
